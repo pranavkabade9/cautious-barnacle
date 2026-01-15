@@ -1,0 +1,51 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "timetables",
+      "queryScope": "Collection",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "Ascending"
+        },
+        {
+          "fieldPath": "day",
+          "order": "Ascending"
+        },
+        {
+          "fieldPath": "startTime",
+          "order": "Ascending"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "events",
+      "queryScope": "Collection",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "Ascending"
+        },
+        {
+          "fieldPath": "date",
+          "order": "Ascending"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "tasks",
+      "queryScope": "Collection",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "Ascending"
+        },
+        {
+          "fieldPath": "dueDate",
+          "order": "Ascending"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

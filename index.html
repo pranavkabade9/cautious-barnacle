@@ -1,125 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>College Timetable</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            background: #ffffff;
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-            border-radius: 6px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        label {
-            display: block;
-            margin-top: 12px;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-
-        button {
-            margin-top: 15px;
-            padding: 10px;
-            width: 100%;
-            background: #007bff;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        table {
-            width: 100%;
-            margin-top: 30px;
-            border-collapse: collapse;
-            background: #ffffff;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background: #007bff;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-
-<h1>College Timetable</h1>
-
-<form>
-    <label>Subject Name</label>
-    <input type="text" placeholder="e.g. Thermodynamics">
-
-    <label>Faculty Name</label>
-    <input type="text" placeholder="e.g. Prof. Sharma">
-
-    <label>Day</label>
-    <select>
-        <option>Monday</option>
-        <option>Tuesday</option>
-        <option>Wednesday</option>
-        <option>Thursday</option>
-        <option>Friday</option>
-        <option>Saturday</option>
-    </select>
-
-    <label>Start Time</label>
-    <input type="time">
-
-    <label>End Time</label>
-    <input type="time">
-
-    <label>Room / Lab</label>
-    <input type="text" placeholder="Room No / Lab Name">
-
-    <button type="submit">Add Timetable Entry</button>
-</form>
-
-<table>
-    <thead>
-        <tr>
-            <th>Day</th>
-            <th>Subject</th>
-            <th>Faculty</th>
-            <th>Time</th>
-            <th>Room</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Monday</td>
-            <td>Thermodynamics</td>
-            <td>Prof. Sharma</td>
-            <td>10:00 – 11:00</td>
-            <td>Room 203</td>
-        </tr>
-    </tbody>
-</table>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%232563eb'>📚</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Scheduling App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>
 
 </body>
 </html>
