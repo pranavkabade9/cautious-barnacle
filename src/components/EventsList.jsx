@@ -11,6 +11,7 @@ const EventsList = ({
   events,
   onEdit,
   onDelete,
+  onExpand,
   loading = false,
   isAdmin = false,
 }) => {
@@ -68,6 +69,12 @@ const EventsList = ({
                 >
                   <Calendar size={16} />
                   <span>Google Calendar</span>
+                </button>
+                <button
+                  onClick={() => onExpand?.(event)}
+                  className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition-colors border border-slate-200"
+                >
+                  Expand View
                 </button>
 
                 {isAdmin && (
