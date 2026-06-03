@@ -11,6 +11,7 @@ const TimetableGrid = ({
   timetables,
   onEdit,
   onDelete,
+  onExpand,
   loading = false,
   isAdmin = false,
 }) => {
@@ -68,8 +69,16 @@ const TimetableGrid = ({
                       </p>
                       <p className="text-gray-500 text-xs">{entry.room}</p>
 
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        <button
+                          onClick={() => onExpand?.(entry)}
+                          className="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2 py-1 rounded"
+                        >
+                          Expand
+                        </button>
+
                       {isAdmin && (
-                        <div className="flex gap-1 mt-2">
+                        <>
                           <button
                             onClick={() => onEdit(entry)}
                             className="text-xs bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded"
@@ -82,8 +91,9 @@ const TimetableGrid = ({
                           >
                             <Trash2 size={12} />
                           </button>
-                        </div>
+                        </>
                       )}
+                      </div>
                     </div>
                   ))
                 )}

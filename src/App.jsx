@@ -5,6 +5,7 @@
 import React, { useState } from 'react';
 import { useAuth } from './hooks/useAuth';
 import { LoginPage, Dashboard } from './pages';
+import { ModalProvider } from './components';
 import './index.css';
 
 function App() {
@@ -24,23 +25,27 @@ function App() {
 
   if (!user) {
     return (
-      <LoginPage
-        onLoginSuccess={() => {
-          setRefreshKey(prev => prev + 1);
-        }}
-      />
+      <ModalProvider>
+        <LoginPage
+          onLoginSuccess={() => {
+            setRefreshKey(prev => prev + 1);
+          }}
+        />
+      </ModalProvider>
     );
   }
 
   return (
-    <Dashboard
-      key={refreshKey}
-      user={user}
-      userRole={userRole}
-      onLogout={() => {
-        setRefreshKey(prev => prev + 1);
-      }}
-    />
+    <ModalProvider>
+      <Dashboard
+        key={refreshKey}
+        user={user}
+        userRole={userRole}
+        onLogout={() => {
+          setRefreshKey(prev => prev + 1);
+        }}
+      />
+    </ModalProvider>
   );
 }
 

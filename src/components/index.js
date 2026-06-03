@@ -12,3 +12,4 @@ export { default as TimetableGrid } from './TimetableGrid';
 export { default as EventsList } from './EventsList';
 export { default as TasksList } from './TasksList';
 export { default as ProtectedRoute } from './ProtectedRoute';
+export { ModalProvider, useModalManager } from './ModalProvider';

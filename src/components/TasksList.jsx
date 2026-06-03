@@ -11,6 +11,7 @@ const TasksList = ({
   onEdit,
   onDelete,
   onToggleComplete,
+  onExpand,
   loading = false,
   isAdmin = false,
 }) => {
@@ -95,6 +96,15 @@ const TasksList = ({
               )}
 
               {/* Action Buttons */}
+              <div className="flex flex-wrap gap-2 mt-3">
+                <button
+                  onClick={() => onExpand?.(task)}
+                  className="text-xs px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded transition-colors"
+                >
+                  Expand View
+                </button>
+              </div>
+
               {isAdmin && !task.completed && (
                 <div className="flex gap-2 mt-3">
                   <button
